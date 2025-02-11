@@ -1,0 +1,95 @@
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visiable" class="bg-danger pt-3 text-center">
+            <h4>Div1</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div *ngIf="isDiv2Visiable" class="bg-danger pt-3 text-center">
+            <h4>Div2</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div *ngIf="num1 == num2" class="bg-secondary pt-3 text-center">
+            <h4>Div3</h4>
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div *ngIf="selectedState == 'India'" class="bg-secondary pt-3 text-center">
+            <h4>Div4</h4>
+        </div>
+    </div>
+
+    <div class="row pt-3">
+        <div class="col-3 text-center">
+            <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+            <button class="btn btn-primary max-2" (click)="showDiv1()">show</button>
+        </div>
+        <div class="col-3 text-center">
+            <button class="btn btn-success" (click)="toggleDiv2()">Toggle</button>
+        </div>
+
+        <div class="col-3 text-center">
+            <input type="text" [(ngModel)]="num1" placeholder="Enter Num1 Value" />
+            <input type="text" [(ngModel)]="num2" placeholder="Enter Num2 Value" />
+        </div>
+        <div class="col-3 text-center">
+            <input type="checkbox" [(ngModel)]="isActive" class="width-50" />
+            <select [(ngModel)]="selectedState">
+                <option value="">Select</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+                <option value="Nepal">Nepal</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityArray">{{ city }}</li>
+        </ul>
+    </div>
+    <div class="col-3">
+        <div *ngFor="let city of cityArray">{{ city }}</div>
+    </div>
+    <div class="col-3">
+        <select>
+            <option *ngFor="let city of cityArray">{{ city }}</option>
+        </select>
+    </div>
+    <div class="col-3">
+        <select>
+            <option *ngFor="let student of studentList" [value]="student.studentId">
+                {{ student.name }}
+            </option>
+        </select>
+    </div>
+
+    <div class="col-3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>StudentId</th>
+                    <th>Student Name</th>
+                    <th>City</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentList">
+                    <td>{{student.studentId}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.city}}</td>
+                    <td><span *ngIf="student.isActive">Active</span>
+                        <span *ngIf="!student.isActive">Deactive</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
