@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-3">one Way - from .ts to .html</div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4">
+                interpolation
+                <h4>{{ courseName }}</h4>
+                <input type="text" value="{{ courseName }}" placeholder="Enter your Text" />
+                <input type="{{ inputType }}" />
+            </div>
+            <div class="col-4">
+                Property Binding
+                <div [class]="myClassName">Primary Button</div>
+                <input type="text" [value]="courseName" />
+            </div>
+            <div class="col-4">
+                <button class="btn btn-success" (click)="showAlert('welcome to Angular 18')">Show Welcome</button>
+                <span (click)="showAlert('This is span')">click Me
+                </span>
+                <button class="btn btn-success" (click)="changeCourseName()">Change Course</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <input type="text" [(ngModel)]="courseName" /> - {{courseName}}
+
+        <input type="checkbox" [(ngModel)]="isIndia" /> - {{isIndia}}
+
+        <select [(ngModel)]="stateName">
+            <option value="">Select</option>
+            <option value="Pune">Pune</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Goa">Goa</option>
+            <option value="Lucknow">Lucknow</option>
+        </select>
+    </div>
+    <div class="col-6">
+
+        <h2>{{firstName()}}</h2>
+        <button class="btn btn-success" (click)="changeCourseName()">Change Name</button>
+    </div>
+</div>
