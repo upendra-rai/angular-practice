@@ -11,6 +11,9 @@ import { TemplateComponent } from './components/forms/template/template.componen
 import { ReactiveComponent } from './components/forms/reactive/reactive.component';
 import { ApiIntegrationComponent } from './components/api-integration/api-integration.component';
 import { PostApiComponent } from './components/post-api/post-api.component';
+import { NgTemplateComponent } from './components/ng-template/ng-template.component';
+import { NgContainerComponent } from './components/ng-container/ng-container.component';
+import { ViewChildComponent } from './components/view-child/view-child.component';
 
 export const routes: Routes = [
     {
@@ -60,5 +63,17 @@ export const routes: Routes = [
    {
      path:'post',
      component: PostApiComponent
+   },
+   {
+     path:'ng',
+     component: NgTemplateComponent
+   },
+   {
+     path:'ng-cont',
+     component: NgContainerComponent
+   },
+   {
+     path:'view-child',
+     component: ViewChildComponent
    },
 ];
