@@ -1,0 +1,35 @@
+<div class="row">
+    <h2>Enter Day Number</h2>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="dayNumber" />
+    </div>
+    <div class="col-3">
+        Day Name is :
+        @switch (dayNumber) {
+        @case ('1') {
+        <span>Monday</span>
+        }
+        @case ('2') {
+        <span>Tuesday</span>
+        }
+        @case ('3') {
+        <span>Wednesday</span>
+        }
+        @case ('4') {
+        <span>thursday</span>
+        }
+        @case ('5') {
+        <span>friday</span>
+        }
+        @case ('6') {
+        <span>sat</span>
+        }
+        @case ('7') {
+        <span>sun</span>
+        }
+        @default {
+        <span>Wrong Entry</span>
+        }
+        }
+    </div>
+</div>
