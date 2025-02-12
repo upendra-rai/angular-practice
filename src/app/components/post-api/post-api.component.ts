@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject ,OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DepertmentService } from '../../service/depertment.service';
-import { AlertComponent } from '../reuseableComponent/alert/alert.component';
-import { MyButtonComponent } from '../reuseableComponent/my-button/my-button.component';
+import { MyButtonComponent } from '../reuseable/my-button/my-button.component';
+import { AlertComponent } from '../reuseable/alert/alert.component';
+
 
 @Component({
   selector: 'app-post-api',

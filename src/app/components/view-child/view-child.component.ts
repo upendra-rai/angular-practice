@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild,AfterViewInit } from '@angular/core';
-import { AlertComponent } from '../reuseableComponent/alert/alert.component';
+import { AlertComponent } from '../reuseable/alert/alert.component';
+
 
 @Component({
   selector: 'app-view-child',

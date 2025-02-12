@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { AlertComponent } from '../reuseableComponent/alert/alert.component';
+import { AlertComponent } from '../reuseable/alert/alert.component';
 
 @Component({
   selector: 'app-api-integration',

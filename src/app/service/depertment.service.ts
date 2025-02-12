@@ -1,20 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Constant1 } from '../constant/Constant1';
+
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DepertmentService {
 
-  apiUrl:string='https://projectapi.gerasim.in/api/Complaint/';
+
   constructor(private http:HttpClient) { }
 
   getAllDept(){
-    return this.http.get(this.apiUrl+"GetParentDepartment");
+    return this.http.get(Constant1.API_URL+"GetParentDepartment");
   }
 
 
   saveNewDept(data:any){
-    return this.http.post(`${this.apiUrl}AddNewDepartment`,data);
+    return this.http.post(`${Constant1.API_URL}AddNewDepartment`,data);
   }
 }
