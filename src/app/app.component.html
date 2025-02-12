@@ -36,12 +36,20 @@
                 <li class="nav-item">
                     <a class="nav-link" routerLink="reactive">Reactive Form</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="api">Api Integration</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="post">Post Api Integration</a>
-                </li>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        API Integration
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <a class="dropdown-item" routerLink="api">Get Integration</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="post">Post API Integration</a>
+                        </li>
+                    </ul>
+                </div>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="text" placeholder="Search">
